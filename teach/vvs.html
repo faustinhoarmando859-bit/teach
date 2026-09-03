@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GEEN | Welcome</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+	<style>
+		:root {
+			--ink: #18332f;
+			--muted: #6e817b;
+			--mint: #dcefe5;
+			--green: #2e6a55;
+			--accent: #e9ae5d;
+			--paper: #fffdf8;
+			--line: #d9e5de;
+		}
+
+		* { box-sizing: border-box; }
+
+		body {
+			margin: 0;
+			min-height: 100vh;
+			color: var(--ink);
+			background:
+				radial-gradient(circle at 7% 8%, rgba(233, 174, 93, .18), transparent 25%),
+				linear-gradient(135deg, #f3f8ee 0%, #fffdf8 54%, #edf6ef 100%);
+			font-family: "DM Sans", sans-serif;
+		}
+
+		.page {
+			width: min(1160px, calc(100% - 48px));
+			min-height: 100vh;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: minmax(300px, .9fr) minmax(360px, 1.1fr);
+			align-items: center;
+			gap: clamp(56px, 9vw, 130px);
+			padding: 56px 0;
+		}
+
+		.intro { position: relative; }
+
+		.eyebrow {
+			margin: 0 0 20px;
+			color: var(--green);
+			font-size: .78rem;
+			font-weight: 700;
+			letter-spacing: .16em;
+			text-transform: uppercase;
+		}
+
+		h1, h2 { font-family: "Space Grotesk", sans-serif; }
+
+		h1 {
+			margin: 0;
+			font-size: clamp(4.4rem, 12vw, 8.5rem);
+			line-height: .86;
+			letter-spacing: 0;
+		}
+
+		.welcome-copy {
+			max-width: 390px;
+			margin: 30px 0 0;
+			color: var(--muted);
+			font-size: 1.08rem;
+			line-height: 1.7;
+		}
+
+		.profile {
+			width: min(250px, 70vw);
+			aspect-ratio: 1;
+			margin: 42px 0 0 12px;
+			padding: 10px;
+			border: 2px solid var(--accent);
+			border-radius: 50%;
+			background: var(--paper);
+			box-shadow: 15px 18px 0 rgba(46, 106, 85, .13);
+			transform: rotate(-4deg);
+		}
+
+		.profile img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			object-fit: cover;
+			transform: rotate(4deg);
+		}
+
+		.form-shell {
+			padding: clamp(28px, 5vw, 56px);
+			border: 1px solid rgba(46, 106, 85, .16);
+			border-radius: 12px;
+			background: rgba(255, 253, 248, .84);
+			box-shadow: 0 22px 60px rgba(24, 51, 47, .1);
+			backdrop-filter: blur(10px);
+		}
+
+		h2 {
+			margin: 0 0 8px;
+			font-size: clamp(1.8rem, 3vw, 2.5rem);
+			line-height: 1.1;
+		}
+
+		.form-subtitle {
+			margin: 0 0 32px;
+			color: var(--muted);
+			line-height: 1.55;
+		}
+
+		form { display: grid; gap: 20px; }
+
+		.field-row {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 16px;
+		}
+
+		label {
+			display: grid;
+			gap: 8px;
+			color: var(--ink);
+			font-size: .83rem;
+			font-weight: 700;
+		}
+
+		input {
+			width: 100%;
+			border: 1px solid var(--line);
+			border-radius: 6px;
+			padding: 14px 15px;
+			color: var(--ink);
+			background: #fff;
+			font: inherit;
+			outline: none;
+			transition: border-color .2s, box-shadow .2s;
+		}
+
+		input:focus {
+			border-color: var(--green);
+			box-shadow: 0 0 0 3px rgba(46, 106, 85, .13);
+		}
+
+		button {
+			margin-top: 8px;
+			border: 0;
+			border-radius: 6px;
+			padding: 16px 20px;
+			color: #fffdf8;
+			background: var(--green);
+			font: 700 .95rem "DM Sans", sans-serif;
+			cursor: pointer;
+			transition: background .2s, transform .2s;
+		}
+
+		button:hover { background: var(--ink); transform: translateY(-2px); }
+
+		.success {
+			display: none;
+			margin: 22px 0 0;
+			padding: 14px 16px;
+			border-left: 3px solid var(--accent);
+			color: var(--green);
+			background: var(--mint);
+			font-weight: 700;
+		}
+
+		.success.visible { display: block; }
+
+		@media (max-width: 760px) {
+			.page {
+				width: min(100% - 32px, 560px);
+				grid-template-columns: 1fr;
+				gap: 48px;
+				padding: 40px 0 56px;
+			}
+
+			.profile { width: 190px; margin-top: 30px; }
+			.form-shell { padding: 28px 22px; }
+		}
+
+		@media (max-width: 430px) {
+			.field-row { grid-template-columns: 1fr; }
+			h1 { font-size: 4.5rem; }
+		}
+	</style>
+</head>
+<body>
+	<main class="page">
+		<section class="intro" aria-labelledby="page-title">
+			<p class="eyebrow">A place to begin</p>
+			<h1 id="page-title">GEEN</h1>
+			<p class="welcome-copy">Welcome to GEEN. Tell us a little about yourself and let us make your first visit feel like home.</p>
+			<div class="profile">
+				<img src="fau.png" alt="FAU profile image">
+			</div>
+		</section>
+
+		<section class="form-shell" aria-labelledby="form-title">
+			<h2 id="form-title">Come on in.</h2>
+			<p class="form-subtitle">Share your details and we will get you settled.</p>
+			<form id="welcome-form">
+				<label>
+					Name
+					<input type="text" name="name" placeholder="Your name" autocomplete="name" required>
+				</label>
+				<label>
+					Language
+					<input list="languages" name="language" placeholder="Search or choose a language" required>
+					<datalist id="languages">
+						<option value="English">
+						<option value="Spanish">
+						<option value="French">
+						<option value="Hindi">
+						<option value="Arabic">
+						<option value="Portuguese">
+					</datalist>
+				</label>
+				<div class="field-row">
+					<label>
+						Age
+						<input type="number" name="age" min="1" max="120" placeholder="Your age" required>
+					</label>
+					<label>
+						Phone number
+						<input type="tel" name="phone" placeholder="Your phone number" autocomplete="tel" required>
+					</label>
+				</div>
+				<label>
+					Address
+					<input type="text" name="address" placeholder="Your address" autocomplete="street-address" required>
+				</label>
+				<button type="submit">Enter GEEN</button>
+			</form>
+			<p class="success" id="success-message" role="status">Welcome in GEEN. We are glad you are here.</p>
+		</section>
+	</main>
+
+	<script>
+		const form = document.querySelector('#welcome-form');
+		const successMessage = document.querySelector('#success-message');
+
+		form.addEventListener('submit', (event) => {
+			event.preventDefault();
+			successMessage.classList.add('visible');
+			successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+		});
+	</script>
+</body>
+</html>
