@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #153d2b;
+    background: #eefaf0;
+    display: grid;
+    grid-template-columns: minmax(580px, 2fr) minmax(260px, 1fr);
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "main sidebar";
+}
+
+header {
+    grid-area: header;
+    background: #1d693d;
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+nav {
+    grid-area: nav;
+    background: #0f4a27;
+    padding: 15px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+nav button,
+main a {
+    border: 1px solid #1d693d;
+    padding: 10px 15px;
+    border-radius: 6px;
+    background: transparent;
+    color: #11351d;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+nav .btn-1 {
+    background: transparent;
+    color: #1d693d;
+    border: 2px solid #1d693d;
+    margin-right: 12px;
+}
+
+nav .btn-4 {
+    background: transparent;
+    color: #1d693d;
+    border: 2px dashed #1d693d;
+    margin-left: 12px;
+}
+
+nav button:hover,
+main a:hover {
+    background: #d9f7d8;
+}
+
+main p a[data-style="style1.css"] {
+    margin-right: 16px;
+}
+
+main p a[data-style="style4.css"] {
+    margin-left: 16px;
+}
+
+main {
+    grid-area: main;
+    width: auto;
+    margin: 20px 20px 20px 40px;
+    background: #fafff8;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 18px rgba(0,0,0,.1);
+}
+
+main h2 {
+    color: #1d693d;
+    margin-top: 20px;
+}
+
+aside {
+    grid-area: sidebar;
+    width: auto;
+    margin: 20px 40px 20px 20px;
+    background: skyblue;
+    padding: 25px;
+    border-left: 5px solid #1d693d;
+    border-radius: 8px;
+}
+
+aside h3 {
+    color: #0f4a27;
+}

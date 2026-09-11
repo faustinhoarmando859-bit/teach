@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>same page different stylesheets</title>
+    <link id="active-stylesheet" rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Homepage</h1>
+        <p>use the menu to select different Stylesheets</p>
+    </header>
+    <nav id="main-menu" aria-label="stylesheet menu">
+        <button type="button" class="btn-1" data-style="style1.css">Stylesheet 1</button>
+        <button type="button" data-style="style2.css">Stylesheet 2</button>
+        <button type="button" data-style="style3.css">Stylesheet 3</button>
+        <button type="button" class="btn-4" data-style="style4.css">Stylesheet 4</button>
+        <button type="button" data-style="">No Stylesheet</button>
+    </nav>
+    <main>
+        <h2>same page Different Stylesheets</h2>
+        <p>This is a demonstration of how different stylesheets can change the appearance of the same HTML content.</p>
+        <p>
+            <a href="#" data-style="style1.css">Stylesheet 1</a>
+            <a href="#" data-style="style2.css">Stylesheet 2</a>
+            <a href="#" data-style="style3.css">Stylesheet 3</a>
+            <a href="#" data-style="style4.css">Stylesheet 4</a>
+        </p>
+        <h2>No Styles</h2>
+        <p>This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks with no stylesheet .</p>
+        <p><a href="#" data-style="">No Stylesheet</a></p>
+    </main>
+    <aside id="sidebar">
+        <h3>Side-bar</h3>
+        <p>lorem ipsum dolor sit amet, consectetuer adiam nonumy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    </aside>
+    <script src="script.js"></script>
+</body>
+</html>

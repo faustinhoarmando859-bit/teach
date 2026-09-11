@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    color: #b8f7b3;
+    background: #15351d;
+}
+
+header {
+    background: #0b4428;
+    color: #d8ffd8;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+nav {
+    background: #193b26;
+    padding: 15px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+nav button,
+main a {
+    border: 1px solid #b8f7b3;
+    padding: 10px 15px;
+    border-radius: 0;
+    background: transparent;
+    color: #b8f7b3;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+nav .btn-1 {
+    background: transparent;
+    color: #b8f7b3;
+    border: 2px solid #b8f7b3;
+}
+
+nav .btn-4 {
+    background: transparent;
+    color: #b8f7b3;
+    border: 2px dashed #b8f7b3;
+}
+
+nav button:hover,
+main a:hover {
+    background: #b8f7b3;
+    color: #14291d;
+}
+
+main {
+    width: min(900px, calc(100% - 40px));
+    margin: 20px auto;
+    background: #102716;
+    padding: 25px;
+    border: 2px solid #b8f7b3;
+    border-radius: 0;
+}
+
+main h2 {
+    color: #b8f7b3;
+    margin-top: 20px;
+}
+
+main p,
+main a {
+    color: #b8f7b3;
+}
+
+aside {
+    width: min(900px, calc(100% - 40px));
+    margin: 20px auto;
+    background: #183c24;
+    padding: 25px;
+    border-left: 5px solid #b8f7b3;
+    border-radius: 8px;
+}
+
+aside h3 {
+    color: #b8f7b3;
+}
