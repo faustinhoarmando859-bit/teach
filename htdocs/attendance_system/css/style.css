@@ -1,0 +1,120 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+/* Sidebar */
+
+.sidebar {
+    position: fixed;
+    width: 230px;
+    height: 100vh;
+    background: #172554;
+    padding: 25px 15px;
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 13px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
+
+.sidebar a:hover {
+    background: #2563eb;
+}
+
+/* Main */
+
+.main {
+    margin-left: 230px;
+    padding: 30px;
+}
+
+.header {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    color: #172554;
+    margin-bottom: 8px;
+}
+
+/* Cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    color: #172554;
+    font-size: 28px;
+}
+
+/* Welcome */
+
+.welcome {
+    background: white;
+    margin-top: 25px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.welcome h2 {
+    color: #172554;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.welcome a {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+}
+
+.welcome a:hover {
+    background: #1d4ed8;
+}
